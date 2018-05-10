@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>T-T for EB</title>
+
+    <!-- CSS -->
+    <link type="text/css" rel="stylesheet/less" href="//cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
+    <link type="text/css" rel="stylesheet/less" href="less/style.less" />
+    <script>less = { env: 'development'};</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.2/less.min.js" ></script>
+    <script>less.watch();</script>
+
+    <!-- GOOGLE FONTS -->
+    <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600">
+
+</head>
+
+<body>
+
+    <!-- SLIDER -->
+    <section class="section-slider">
+        <h1 class="main-title">Next Movies</h1>
+        <div class="slider">
+
+            <div class="slides"></div>
+
+            <div class="nav-wrap">
+                <span class="nav nav-left bg-dark"><i class="icon-ctrl"></i></span>
+                <span class="nav nav-right bg-dark"><i class="icon-ctrl"></i></span>
+            </div>
+
+            <div class="pagination"></div>
+        </div>
+    </section>
+
+    <!-- TEMPLATE SLIDE -->
+    <script type="text/template" data-template="templateSlide">
+        <div class="slide${active}" data-slide="${index}">
+            <img class="img" src="https://image.tmdb.org/t/p/original${img}" alt="${title}">
+            <div class="info bg-dark">
+                <h2 class="title">${title}</h2>
+                <div class="vote">
+                    <div class="vote-full" style="width: ${vote}%;">
+                        <i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i>
+                    </div>
+                    <div class="vote-empty">
+                        <i class="icon-star-empty"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i>
+                    </div>
+                </div>
+                <p class="desc">${desc}</p>
+            </div>
+        </div>
+    </script>
+
+    <!-- TEMPLATE BULLET -->
+    <script type="text/template" data-template="templateBullet">
+        <span class="bullet${active}" data-slide="${index}"></span>
+    </script>
+
+    <!-- JS -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+</body>
+</html>
